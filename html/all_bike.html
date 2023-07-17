@@ -1,0 +1,479 @@
+<html>
+
+<head>
+	<title>ALL-BIKE MDBIKE</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://kit.fontawesome.com/3875455e82.js" crossorigin="anonymous"></script>
+	<meta name="viewport" content="width=device-width. initial-scale=1.0">
+	<script src="../css_js/jquery-3.6.0.min.js"></script>
+	<script src="../css_js/JSTD.js"></script>
+	<script src="../css_js/muahang.js"></script>
+	<link rel="stylesheet" type="text/css" href="../css_js/all_bike.css">
+	<link rel="stylesheet" type="text/css" href="../css_js/CSSTD.css">
+</head>
+
+<body style="background-color:#EEEEEE">
+	<div id="t">
+		<ul>
+			<li><a href="#">Trung tâm bảo hành</a></li>
+			<li><a href="#">Tuyển dụng</a></li>
+			<li><a href="#">Tra cứu đơn hàng</a></li>
+			<li><a href="../login/dangnhap.html">Đăng nhập</a></li>
+		</ul>
+	</div>
+	<div id="header">
+		<i class="fa fa-bars"></i>
+		<a href="index.html">
+			<span><strong>MDBIKE</strong></span>
+		</a>
+		<div id="TK">
+			<form action="" method="POST" autocomplete="on">
+				<div class="timkiem">
+					<input id="text" type="text" placeholder="Bạn cần tìm gì?" />
+					<div>
+						<button type="submit" class="search"><img
+								src="https://img.icons8.com/ios/28/000000/search--v1.png" /></button>
+					</div>
+				</div>
+			</form>
+		</div>
+		<div id="gio">
+			<a href="giohang.html" id="card-shop">
+				<img src="https://img.icons8.com/carbon-copy/40/000000/shopping-cart.png" />
+				<span id="item" data-count="0">0</span>
+			</a>
+		</div>
+	</div>
+	<div id="nav">
+		<div id="menu">
+			<ul>
+				<li id="all-bikes">
+					<a href="all_bike.html">
+						<span>TẤT CẢ</span>
+					</a>
+
+				</li>
+				<li id="phan-khoi-lon">
+					<a href="phan_khoi_lon.html">
+						<span>PHÂN KHỐI LỚN</span>
+					</a>
+
+				</li>
+				<li id="hang-xe">
+					<a href="hang_xe.html">
+						<span>HÃNG XE</span>
+					</a>
+					<ul>
+						<li><a href="#">HONDA</a></li>
+						<li><a href="#">YAMAHA</a></li>
+						<li><a href="#">SUZUKI</a></li>
+						<li><a href="#">KAWASAKI</a></li>
+						<li><a href="#">KTM</a></li>
+						<li><a href="#">PIAGGIO</a></li>
+						<li><a href="#">DUCATI</a></li>
+						<li><a href="#">BMW</a></li>
+						<li><a href="#">SACHS</a></li>
+						<li><a href="#">SYM</a></li>
+
+					</ul>
+				</li>
+				<li id="phan-khoi">
+					<a href="phan_khoi.html">
+						<span>PHÂN KHỐI</span>
+					</a>
+					<ul>
+						<li><a href="#">-50cc</a></li>
+						<li><a href="#">51cc-174cc</a></li>
+						<li><a href="#">175cc-400cc</a></li>
+						<li><a href="#">401cc-750cc</a></li>
+						<li><a href="#">751cc-1000cc</a></li>
+						<li><a href="#">1000cc-</a></li>
+					</ul>
+				</li>
+				<li id="loai-xe">
+					<a href="loai_xe.html">
+						<span>LOẠI XE</span>
+					</a>
+					<ul>
+						<li><a href="#">Xe Số</a></li>
+						<li><a href="#">Xe Tay Ga</a></li>
+						<li><a href="#">Xe Côn Tay</a></li>
+						<li><a href="#">Sport bike</a></li>
+						<li><a href="#">Khác</a></li>
+
+					</ul>
+				</li>
+				<li id="phu-kien">
+					<a href="phukien.html">
+						<span>PHỤ KIỆN</span>
+					</a>
+				</li>
+
+				<li id="khuyen-mai">
+					<a href="#">
+						<span>KHUYẾN MẠI</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div id="main">
+		<div id="tk-show" style="display: none;">
+			<div class="sap-xep">
+				<ul class="muc-gia-link">
+					<li><strong>Chọn mức giá: </strong></li>
+					<li class="duoi-5" onclick="sx('duoi-5')"><a href="#">Dưới 5 triệu</a></li>
+					<li><a href="#">5 - 10 triệu</a></li>
+					<li><a href="#">10 - 15 triệu</a></li>
+					<li><a href="#">15 - 20 triệu</a></li>
+					<li><a href="#">Trên 20 triệu</a></li>
+				</ul>
+
+				<ul class="sap-xep-link">
+					<li><strong>Sắp xếp theo: </strong></li>
+					<li class="gia-cao" onclick="sx('gia-cao')"><a href="#">Giá cao</a></li>
+					<li class="gia-thap" onclick="sx('gia-thap')"><a href="#">Giá thấp</a></li>
+				</ul>
+			</div>
+			<div id="show"></div>
+		</div>
+		<div id='sanpham'>
+			<h3>XE MÁY NỔI BẬT NHẤT</h3>
+			<div class="sap-xep">
+				<ul class="muc-gia-link">
+					<li><strong>Chọn mức giá: </strong></li>
+					<li class="duoi-5" onclick="sx('duoi-5')"><a href="#">Dưới 10 triệu</a></li>
+					<li><a href="#">10 - 30 triệu</a></li>
+					<li><a href="#">30 - 60 triệu</a></li>
+					<li><a href="#">60 - 100 triệu</a></li>
+					<li><a href="#">Trên 100 triệu</a></li>
+				</ul>
+
+				<ul class="sap-xep-link">
+					<li><strong>Sắp xếp theo: </strong></li>
+					<li class="gia-cao" onclick="sx('gia-cao')"><a href="#">Giá cao</a></li>
+					<li class="gia-thap" onclick="sx('gia-thap')"><a href="#">Giá thấp</a></li>
+				</ul>
+			</div>
+			<div id="1" class="SP col-2 col-m-3 col-s-6 col-xs-12">
+				<img class="product-img" src="../Anh/xe/368_airblade-125fi_1595904310.png" />
+				<a href="#" class="product-name">HONDA AIRBLADE 125 FI</a>
+				<div><b style="color: red" class="product-price">50.000.000 đ</b>&ensp;<s
+						class="product-price-s">50.900.000 đ</s></div>
+				<i class="fa fa-star checked" style="color:Orange"></i>
+				<i class="fa fa-star checked" style="color:Orange"></i>
+				<i class="fa fa-star checked" style="color:Orange"></i>
+				<i class="fa fa-star checked" style="color:Orange"></i>
+				<i class="fa fa-star checked" style="color:Orange"></i>
+				<div class="type">Honda</div>
+			</div>
+			<div id="2" class="SP col-2 col-m-3 col-s-6 col-xs-12">
+				<img class="product-img" src="../Anh/xe/f36edac4728ad8679d3872078b63f1d7.png" />
+				<a href="#" class="product-name">HONDA SUPER CUB C50</a>
+				<div><b style="color: red" class="product-price">16.500.000 đ</b>&ensp;<s
+						class="product-price-s">16.590.000 đ</s></div>
+				<i class="fa fa-star checked" style="color:Orange"></i>
+				<i class="fa fa-star checked" style="color:Orange"></i>
+				<i class="fa fa-star checked" style="color:Orange"></i>
+				<i class="fa fa-star checked" style="color:Orange"></i>
+				<i class="fa fa-star checked" style="color:Orange"></i>
+				<div class="type">Honda</div>
+			</div>
+			<div id="3" class="SP col-2 col-m-3 col-s-6 col-xs-12">
+				<img class="product-img" src="../Anh/xe/918c0b91d12cb733281bfe7a5f367265.jpg" />
+				<a href="#" class="product-name">BMW S1000RR 2016 Bản 7HP</a>
+				<div><b style="color: red" class="product-price">145.000.000</b>&ensp;<s
+						class="product-price-s">145.900.000</s></div>
+				<i class="fa fa-star checked" style="color:Orange"></i>
+				<i class="fa fa-star checked" style="color:Orange"></i>
+				<i class="fa fa-star checked" style="color:Orange"></i>
+				<i class="fa fa-star checked" style="color:Orange"></i>
+				<i class="fa fa-star checked" style="color:Orange"></i>
+				<div class="type">BWM</div>
+			</div>
+			<div id="4" class="SP col-2 col-m-3 col-s-6 col-xs-12">
+				<img class="product-img" src="../Anh/xe/97_raider-125.jpg" />
+				<a href="#" class="product-name">SUZUKI RAIDER 125</a>
+				<div><b style="color: red" class="product-price">26.500.000 đ</b>&ensp;<s
+						class="product-price-s">26.590.000 đ</s></div>
+
+				<i class="fa fa-star checked" style="color:Orange"></i>
+				<i class="fa fa-star checked" style="color:Orange"></i>
+				<i class="fa fa-star checked" style="color:Orange"></i>
+				<i class="fa fa-star checked" style="color:Orange"></i>
+				<i class="fa fa-star checked" style="color:Orange"></i>
+				<div class="type">SUZUKI</div>
+			</div>
+			<div id="5" class="SP SP-right col-2 col-m-3 col-s-6 col-xs-12">
+				<a href="../html/wave_alpha-110.html">
+					<img class="product-img" src="../Anh/xe/2021-Honda-Wave-110i.jpg" />
+					<a href="#" class="product-name">HONDA WAVE ALPHA 110 </a>
+					<div><b class="product-price" style="color: red">17.890.000 đ</b>&ensp;<s
+							class="product-price-s">18.390.000 đ</s></div>
+					<i class="fa fa-star checked" style="color:Orange"></i>
+					<i class="fa fa-star checked" style="color:Orange"></i>
+					<i class="fa fa-star checked" style="color:Orange"></i>
+					<i class="fa fa-star checked" style="color:Orange"></i>
+					<i class="fa fa-star checked" style="color:Orange"></i>
+					<div class="type">Honda</div>
+				</a>
+			</div>
+			<div id="6" class="SP  col-2 col-m-3 col-s-6 col-xs-12">
+				<img class="product-img" src="../Anh/xe/964_liberty-125-ie.jpg" />
+				<a href="#" class="product-name">PIAGGIO LIBERTY 125 I.E</a>
+				<div><b style="color: red" class="product-price">12.000.000 đ</b>&ensp;<s
+						class="product-price-s">13.460.000 đ</s></div>
+
+				<i class="fa fa-star checked" style="color:Orange"></i>
+				<i class="fa fa-star checked" style="color:Orange"></i>
+				<i class="fa fa-star checked" style="color:Orange"></i>
+				<i class="fa fa-star checked" style="color:Orange"></i>
+				<i class="fa fa-star checked" style="color:Orange"></i>
+				<div class="type">PIAGGIO</div>
+			</div>
+			<div id="7" class="SP  col-2 col-m-3 col-s-6 col-xs-12">
+				<img class="product-img" src="../Anh/xe/856_exciter-135.jpg" />
+				<a href="#" class="product-name">YAMAHA EXCITER 135</a>
+				<div><b style="color: red" class="product-price">46.500.000 đ</b>&ensp;<s
+						class="product-price-s">47.000.000 đ</s></div>
+				<i class="fa fa-star checked" style="color:Orange"></i>
+				<i class="fa fa-star checked" style="color:Orange"></i>
+				<i class="fa fa-star checked" style="color:Orange"></i>
+				<i class="fa fa-star checked" style="color:Orange"></i>
+				<i class="fa fa-star checked" style="color:Orange"></i>
+				<div class="type">YAMAHA</div>
+			</div>
+			<div id="8" class="SP  col-2 col-m-3 col-s-6 col-xs-12">
+				<img class="product-img" src="../Anh/xe/AjAslqMuYpko2d6wmuEs.png" />
+				<a href="#" class="product-name">Winner X </a>
+				<div><b class="product-price" style="color: red">49.990.000 đ</b>&ensp;<s
+						class="product-price-s">50.060.000 đ</s></div>
+				<i class="fa fa-star checked" style="color:Orange"></i>
+				<i class="fa fa-star checked" style="color:Orange"></i>
+				<i class="fa fa-star checked" style="color:Orange"></i>
+				<i class="fa fa-star checked" style="color:Orange"></i>
+				<i class="fa fa-star checked" style="color:Orange"></i>
+				<div class="type">Honda</div>
+			</div>
+			<div id="9" class="SP  col-2 col-m-3 col-s-6 col-xs-12">
+				<img class="product-img" src="../Anh/xe/wvn.062a4a05c9268f7.24666107.jpg" />
+				<a href="#" class="product-name">Honda Air Blade 150cc 2022 New Mới. Màu Đen. Chuẩn</a>
+				<div><b style="color: red" class="product-price">21.000.000 đ</b>&ensp;<s
+						class="product-price-s">22.990.000 đ</s></div>
+				<i class="fa fa-star checked" style="color:Orange"></i>
+				<i class="fa fa-star checked" style="color:Orange"></i>
+				<i class="fa fa-star checked" style="color:Orange"></i>
+				<i class="fa fa-star checked" style="color:Orange"></i>
+				<i class="fa fa-star checked" style="color:Orange"></i>
+				<div class="type">Honda</div>
+			</div>
+			<div id="10" class="SP SP-right col-2 col-m-3 col-s-6 col-xs-12">
+				<img class="product-img" src="../Anh/xe/HjIbraojXjvocCEgoXiB.png" />
+				<a href="#" class="product-name">HONDA VISION 110</a>
+				<div><b style="color: red" class="product-price">40.000.000 đ</b>&ensp;<s
+						class="product-price-s">40.990.000 đ</s></div>
+				<i class="fa fa-star checked" style="color:Orange"></i>
+				<i class="fa fa-star checked" style="color:Orange"></i>
+				<i class="fa fa-star checked" style="color:Orange"></i>
+				<i class="fa fa-star checked" style="color:Orange"></i>
+				<i class="fa fa-star checked" style="color:Orange"></i>
+				<div class="type">Honda</div>
+			</div>
+			<div id="11" class="SP  col-2 col-m-3 col-s-6 col-xs-12">
+				<img class="product-img" src="../Anh/xe/105_hayate-125.jpg" />
+				<a href="#" class="product-name">SUZUKI HAYATE 125</a>
+				<div><b style="color: red" class="product-price">7.500.000 đ</b>&ensp;<s
+						class="product-price-s">7.599.000 đ</s></div>
+
+				<i class="fa fa-star checked" style="color:Orange"></i>
+				<i class="fa fa-star checked" style="color:Orange"></i>
+				<i class="fa fa-star checked" style="color:Orange"></i>
+				<i class="fa fa-star checked" style="color:Orange"></i>
+				<i class="fa fa-star checked" style="color:Orange"></i>
+				<div class="type">SUZUKI</div>
+			</div>
+			<div id="12" class="SP  col-2 col-m-3 col-s-6 col-xs-12">
+				<img class="product-img" src="../Anh/xe/Sirius-Mat-Black-Disk-002.png" />
+				<a href="#" class="product-name">YAMAHA Sirius </a>
+				<div><b class="product-price" style="color: red">20.500.000 đ</b>&ensp;<s
+						class="product-price-s">20.990.000 đ</s></div>
+				<i class="fa fa-star checked" style="color:Orange"></i>
+				<i class="fa fa-star checked" style="color:Orange"></i>
+				<i class="fa fa-star checked" style="color:Orange"></i>
+				<i class="fa fa-star checked" style="color:Orange"></i>
+				<i class="fa fa-star checked" style="color:Orange"></i>
+				<div class="type">YAMAHA</div>
+			</div>
+			<div id="13" class="SP  col-2 col-m-3 col-s-6 col-xs-12">
+				<img class="product-img" src="../Anh/xe/62ac6a4b9306e916e805c80427d5d4e8.jpg" />
+				<a href="#" class="product-name">SYM Star SR 125 EFI Xanh Biển Đen</a>
+				<div><b style="color: red" class="product-price">55.000.000 đ</b>&ensp;<s
+						class="product-price-s">55.890.000 đ</s></div>
+
+				<i class="fa fa-star checked" style="color:Orange"></i>
+				<i class="fa fa-star checked" style="color:Orange"></i>
+				<i class="fa fa-star checked" style="color:Orange"></i>
+				<i class="fa fa-star checked" style="color:Orange"></i>
+				<i class="fa fa-star checked" style="color:Orange"></i>
+				<div class="type">SYM</div>
+			</div>
+			<div id="14" class="SP  col-2 col-m-3 col-s-6 col-xs-12">
+				<a href="HONDA_SH_150I.html">
+					<img class="product-img" src="../Anh/xe/4_Red.png" />
+					<a href="#" class="product-name">HONDA SH 150I</a>
+					<div><b class="product-price" style="color: red">79.500.000 đ</b>&ensp;<s
+							class="product-price-s">80.250.000 đ</s></div>
+				</a>
+				<i class="fa fa-star checked" style="color:Orange"></i>
+				<i class="fa fa-star checked" style="color:Orange"></i>
+				<i class="fa fa-star checked" style="color:Orange"></i>
+				<i class="fa fa-star checked" style="color:Orange"></i>
+				<i class="fa fa-star checked" style="color:Orange"></i>
+				<div class="type">Honda</div>
+
+			</div>
+			<div id="15" class="SP SP-right col-2 col-m-3 col-s-6 col-xs-12">
+				<img class="product-img" src="../Anh/xe/984_rc-250.jpg.crdownload" />
+				<a href="#" class="product-name">KTM RC 250</a>
+				<div><b style="color: red" class="product-price">68.400.000 đ</b>&ensp;<s
+						class="product-price-s">69.000.000 đ</s></div>
+				<i class="fa fa-star checked" style="color:Orange"></i>
+				<i class="fa fa-star checked" style="color:Orange"></i>
+				<i class="fa fa-star checked" style="color:Orange"></i>
+				<i class="fa fa-star checked" style="color:Orange"></i>
+				<i class="fa fa-star checked" style="color:Orange"></i>
+				<div class="type">KTM</div>
+			</div>
+			<div id="16" class="SP col-2 col-m-3 col-s-6 col-xs-12">
+				<img class="product-img" src="../Anh/xe/tải_xuống.jpg" />
+				<a href="#" class="product-name">PIAGGIO Medley 125 ABS</a>
+				<div><b style="color: red" class="product-price">72.590.000 đ</b>&ensp;<s
+						class="product-price-s">73.600.000 đ</s></div>
+				<i class="fa fa-star checked" style="color:Orange"></i>
+				<i class="fa fa-star checked" style="color:Orange"></i>
+				<i class="fa fa-star checked" style="color:Orange"></i>
+				<i class="fa fa-star checked" style="color:Orange"></i>
+				<i class="fa fa-star checked" style="color:Orange"></i>
+				<div class="type">PIAGGIO</div>
+			</div>
+			<div id="17" class="SP col-2 col-m-3 col-s-6 col-xs-12">
+				<img class="product-img" src="../Anh/xe/Luvias.jpg" />
+				<a href="#" class="product-name">YAMAHA Luvias 125</a>
+				<div><b style="color: red" class="product-price">27.800.000 đ</b>&ensp;<s
+						class="product-price-s">28.500.000 đ</s></div>
+				<i class="fa fa-star checked" style="color:Orange"></i>
+				<i class="fa fa-star checked" style="color:Orange"></i>
+				<i class="fa fa-star checked" style="color:Orange"></i>
+				<i class="fa fa-star checked" style="color:Orange"></i>
+				<i class="fa fa-star checked" style="color:Orange"></i>
+				<div class="type">YAMAHA</div>
+			</div>
+			<div id="18" class="SP col-2 col-m-3 col-s-6 col-xs-12">
+				<img class="product-img"
+					src="../Anh/xe/72-content-news-honda-future-2022-6-20220505102103-swnwpnug_o.jpg" />
+				<a href="#" class="product-name">Honda Future</a>
+				<div><b style="color: red" class="product-price">30.260.000 đ</b>&ensp;<s
+						class="product-price-s">30.300.000 đ</s></div>
+				<i class="fa fa-star checked" style="color:Orange"></i>
+				<i class="fa fa-star checked" style="color:Orange"></i>
+				<i class="fa fa-star checked" style="color:Orange"></i>
+				<i class="fa fa-star checked" style="color:Orange"></i>
+				<i class="fa fa-star checked" style="color:Orange"></i>
+				<div class="type">Honda</div>
+			</div>
+			<div id="19" class="SP col-2 col-m-3 col-s-6 col-xs-12">
+				<img class="product-img" src="../Anh/xe/PxbOtPG619Vte84CQHPg.png" />
+				<a href="#" class="product-name">Honda LEAD</a>
+				<div><b style="color: red" class="product-price">39.250.000 đ</b>&ensp;<s
+						class="product-price-s">39.990.000 đ</s></div>
+				<i class="fa fa-star checked" style="color:Orange"></i>
+				<i class="fa fa-star checked" style="color:Orange"></i>
+				<i class="fa fa-star checked" style="color:Orange"></i>
+				<i class="fa fa-star checked" style="color:Orange"></i>
+				<i class="fa fa-star checked" style="color:Orange"></i>
+				<div class="type">Honda</div>
+			</div>
+			<div id="20" class="SP SP-right col-2 col-m-3 col-s-6 col-xs-12">
+				<img class="product-img" src="../Anh/xe/7b089c68-5881-4092-b439-5abeee7ea09e.png" />
+				<a href="#" class="product-name">NINJA 400 ABS</a>
+				<div><b class="product-price" style="color: red">160.000.000</b>&ensp;<s
+						class="product-price-s">161.000.000</s></div>
+				<i class="fa fa-star checked" style="color:Orange"></i>
+				<i class="fa fa-star checked" style="color:Orange"></i>
+				<i class="fa fa-star checked" style="color:Orange"></i>
+				<i class="fa fa-star checked" style="color:Orange"></i>
+				<i class="fa fa-star checked" style="color:Orange"></i>
+				<div class="type">Honda</div>
+			</div>
+
+
+
+
+
+		</div>
+		<div id='footer'>
+			<div class="footer">
+				<div class="footer1">
+					<h3>Tìm cửa hàng</h3>
+					<div>Tìm cửa hàng gần nhất</div>
+					<div>Mua hàng từ xa</div>
+					<h3>Phương thức thanh toán</h3>
+					<ul>
+						<li>
+							<img src="../logo/logo-visa.png">
+							<img src="../logo/logo-master.png">
+						</li>
+						<li>
+							<img src="../logo/logo-jcb.png">
+							<img src="../logo/logo-samsungpay.png">
+						</li>
+						<li>
+							<img src="../logo/logo-atm.png">
+							<img src="../logo/logo-vnpay.png">
+						</li>
+					</ul>
+				</div>
+				<div class="footer1">
+					<h3>Điện thoại</h3>
+					<div>Gọi mua hàng:0987654321(8h/22h)</div>
+					<div>Gọi bảo hành:0987654333(8h/22h)</div>
+					<div>Gọi khiếu nại:0987654222(8h/22h)</div>
+				</div>
+				<div class="footer1">
+					<div class="TT">
+						<div>Mua hàng và thanh toán online</div>
+						<div>Mua hàng trả góp online</div>
+						<div>Tra thông tin đơn hàng</div>
+						<div>Tra thông tin bảo hành</div>
+						<div>Dịch vụ bảo hành điện thoại</div>
+						<div>Đối tác phụ vụ bảo hành</div>
+					</div>
+				</div>
+				<div class="footer1">
+					<div class="TT">
+						<div>Quy chế hoạt động</div>
+						<div>Chính sách bảo hành</div>
+						<div>Liên hệ hợp tác kin doanh</div>
+						<div>Tuyển dụng</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script>
+			function loadQuantityProduct() {
+				let cart = JSON.parse(localStorage.getItem('cart'));
+				const item = $(document).find('#item');
+				if (cart) {
+					item.text(cart.length);
+					item.addClass('haveProduct');
+				}
+				if (item.text() == 0) {
+					item.removeClass('haveProduct');
+				}
+			}
+			loadQuantityProduct();
+		</script>
+		<script src="../css_js/cart.js"></script>
+</body>
+
+</html>

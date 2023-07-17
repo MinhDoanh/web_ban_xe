@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Biểu tượng giỏ hàng</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        .cart-icon {
+            font-size: 24px;
+            color: #000;
+            cursor: pointer;
+        }
+
+        .cart-counter {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            background-color: red;
+            color: #fff;
+            font-size: 12px;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 18px;
+        }
+    </style>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            // Số lượng sản phẩm trong giỏ hàng
+            let cartItems = 5;
+
+            // Hiển thị số lượng sản phẩm trên biểu tượng giỏ hàng
+            let cartCounter = document.querySelector('.cart-counter');
+            cartCounter.innerText = cartItems;
+        });
+    </script>
+</head>
+<body>
+    <div>
+        <i class="fas fa-shopping-cart cart-icon"></i>
+        <span class="cart-counter"></span>
+    </div>
+</body>
+</html>

@@ -1,0 +1,241 @@
+<html>
+
+<head>
+	<title>MDBIKE</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://kit.fontawesome.com/3875455e82.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="../css_js/muangay.css">
+	<script src="../css_js/jquery-3.6.0.min.js"></script>
+	<!-- <script src="../css_js/muahang.js"></script>
+		<script src="../css_js/khachhang.js"></script> -->
+</head>
+
+<body style="background-color:#EEEEEE">
+	<div id="t">
+		<ul>
+			<li><a href="#">Trung tâm bảo hành</a></li>
+			<li><a href="#">Tuyển dụng</a></li>
+			<li><a href="#">Tra cứu đơn hàng</a></li>
+			<li><a href="../login/dangnhap.html">Đăng nhập</a></li>
+		</ul>
+	</div>
+	<div id='giohang'>
+		<div class="cart">
+			<div class="phan-dau">
+				<a href="index.html">
+					<img style="float: left;" src="https://img.icons8.com/pastel-glyph/60/000000/back.png" />
+					<strong>Quay lại</strong>
+				</a>
+			</div>
+			<div class="phan-than">
+				<div class="cart-info col-7">
+					<div class="cart-icon">
+						<div class="icon-cart">
+							<img src="https://img.icons8.com/material-outlined/64/008000/checked--v1.png" /><br />
+							<strong>Đặt Hàng Sản Phẩm</strong>
+						</div>
+						<div id="item-cart">
+							<div class="cart_img">
+								<img src="">
+							</div>
+							<div class="name_gia">
+								<div class="ng_name">
+									<strong class="bike-name"></strong><br>
+									<strong class="bike-year-color" style="color: #ccc;"></strong>
+								</div>
+								<div class="ng_gia">
+									<strong class="product-price"></strong>
+								</div>
+							</div>
+
+						</div>
+						<div class="tong-tien">
+							<p>
+								Tổng giá trị:
+								<strong class="price price-text">31.590.000 ₫</strong>
+							</p>
+							<p>
+								Giảm giá:
+								<strong class="price">-00 ₫</strong>
+							</p>
+							<p>
+								Tổng thanh toán:
+								<strong class="price price-total price-text text-red">31.590.000 ₫</strong>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="luachon">
+					<div class="product-option version">
+						<strong class="lable">Lựa chọn phiên bản</strong>
+						<div class="option">
+							<input type="radio" id="g1-1" name="g1" value="1" /><label for="g1-1">2022
+								<strong>19.000.000</strong>
+							</label>
+						</div>
+
+						<div class="option">
+							<input type="radio" id="g1-2" name="g1" value="2" /><label for="g1-2">2021
+								<strong>18.290.000</strong></label>
+
+						</div>
+
+						<div class="option">
+							<input type="radio" id="g1-3" name="g1" value="3" /><label for="g1-3">2020
+								<strong>17.890.000</strong>
+							</label>
+
+						</div>
+					</div>
+
+					<div class="product-option version">
+						<strong class="lable">Lựa chọn màu</strong>
+						<div class="option">
+							<input type="radio" id="g2-1" name="g2" value="1" />
+							<label for="g2-1"><span>White</span></label>
+
+
+						</div>
+
+						<div class="option">
+							<input type="radio" id="g2-2" name="g2" value="2" />
+							<label for="g2-2"><span>Blue</span></label>
+
+						</div>
+
+						<div class="option">
+							<input type="radio" id="g2-3" name="g2" value="3" />
+							<label for="g2-3"><span>Back</span></label>
+
+						</div>
+
+					</div>
+					<div class="number">
+						<label>Số lượng</label>
+						<div class="control">
+							<button class="btn-decrease" type="button">-</button>
+							<input type="text" id="quantity" value="1">
+							<!-- <input type="text" id="q_`+ Number(x.id)+`" onchange="updateQuantity(`+ x.id + `)" value="1"> -->
+							<button class="btn-increase" type="button">+</button>
+						</div>
+					</div>
+				</div>
+				<div class="cart-form col-5">
+					<!-- <form action="" method="POST" autocomplete="on" > -->
+					<div>
+						<h3>Thông tin đặt hàng</h3>
+						<p class="text" style="color: #AAA;">
+							<i>Bạn cần điền đầy đủ các trường thông tin có dấu *</i>
+						</p>
+						<div class="row">
+							<div class="col">
+								<div class="control">
+									<input type="text" name="ho-ten" id="ho-ten" placeholder="Họ và tên *"
+										data-required="1">
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col">
+								<div class="control">
+									<input type="text" name="sdt" id="sdt" placeholder="Số điện thoại *"
+										data-required="1">
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col">
+								<div class="control">
+									<input type="text" name="dia-chi" id="dia-chi" placeholder="Địa chỉ nhận hàng *"
+										data-required="1">
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col">
+								<div class="control">
+									<input type="text" name="email" id="email" placeholder="Email *">
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col">
+								<div class="control">
+									<textarea name="ghi-chu" placeholder="Ghi chú" id="ghi-chu" spellcheck="false"
+										data-minlength="15" style="height: 70px; overflow-y: hidden;"></textarea>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col">
+								<div class="control">
+									<input type="text" name="ma-giam-gia" id="ma-giam-gia"
+										placeholder="Mã giảm giá (nếu có)">
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="control-botton">
+								<button id="btn_check" onclick="xacnhan()">XÁC NHẬN VÀ ĐẶT HÀNG</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- <script>
+		$('#btn_check').click(function () {
+			alert("Đặt hàng thành công !");
+		})
+            // var checkbox=document.getElementsByName('g1');
+            // for (var i = 0; i < checkbox.length; i++){
+            //     if (checkbox[i].checked === true){
+            //         alert(checkbox[i].value);
+            //     }
+            // }
+	</script> -->
+	<!-- <script src="../css_js/muahang.js"></script> -->
+	<script>
+		// 			var list_gh = JSON.parse(localStorage.getItem('giohang'));
+		// 			function updateCart() {
+		//     localStorage.setItem('giohang', JSON.stringify(list_gh));
+		// }
+		// 			function Tang(id) {
+		//     var index = list_gh.findIndex(x => x.id == id);
+		//     if (index >= 0) {
+		//         list_gh[index].quantity += 1; 
+		//     }
+		//     updateCart();
+		//     location.reload();
+		// }
+		// function Giam(id) {
+		//     var index = list_gh.findIndex(x => x.id == id);
+		//     if (index >= 0 && list_gh[index].quantity >=1) {
+		//         list_gh[index].quantity -= 1; 
+		//     }
+		//     updateCart();
+		//     location.reload();
+		// }
+		function loadQuantityProduct() {
+			let cart = JSON.parse(localStorage.getItem('cart'));
+			const item = $(document).find('#item');
+			if (cart) {
+				item.text(cart.length);
+				item.addClass('haveProduct');
+			}
+			if (item.text() == 0) {
+				item.removeClass('haveProduct');
+			}
+		}
+		loadQuantityProduct();
+
+	</script>
+
+	<script src="../css_js/thanhtoan.js"></script>
+	<script src="../css_js/khachhang.js"></script>
+
+
+</body>
+
+</html>

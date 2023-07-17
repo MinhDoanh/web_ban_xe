@@ -1,0 +1,97 @@
+<html>
+<head>
+	<title>MDBIKE</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://kit.fontawesome.com/3875455e82.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="dangnhap.css">
+	<script src="../css_js/jquery-3.6.0.min.js"></script>
+	<script src="login.js"></script>
+</head>
+<body style="background-color:#EEEEEE">
+	<div class="login col-10">
+		<div class="phan-dau">
+			<a href="../html/index.html">
+				<img style="float: left;" src="https://img.icons8.com/pastel-glyph/60/000000/back.png"/>					
+				<strong>Quay lại</strong>
+			</a>
+		</div>
+		<div class="anh">
+			<img src="../Anh/login-bg.png">
+		</div>
+		<div class="from">
+			<h1>Đăng Nhập</h1>
+			<div class="dn-khac">
+				<button type="submit" class="dn-k fb" title="Đăng nhập qua Facebook">
+					<img src="../logo/logo-fb.png">
+					Tiếp tục với Facebook
+				</button>
+				<button type="submit" class="dn-k gg" title="Đăng nhập qua Google">
+					<img src="../logo/logo-gg.png">
+					Tiếp tục với Google
+				</button>
+			</div>
+			<div class="split">
+				<p>Hoặc</p>
+			</div>
+			
+			<form id="login-form" autocomplete="on">
+				<div class="lable">Tài Khoản</div>
+				<input class="input" type="text" id="username" placeholder="Nhập tài khoản *">
+				<div class="lable">Mật khẩu</div>
+				<input class="input" type="password" id="password" placeholder="Nhập mật khẩu *">
+				<div class="check">
+					<input class="checkbox" type="checkbox"> Nhớ đăng nhập
+				</div>
+				<div class="submit">
+					<button class="dn-submit" id="submit_login">ĐĂNG NHẬP</button>
+					<a class="btn" href="dangki.html">ĐĂNG KÍ</a>
+				</div>
+			</form>
+			
+		</div>
+	</div>
+	
+	<script>
+		$(document).ready(function() {
+			// Xử lý sự kiện đăng nhập
+			$("#submit_login").click(function(event) {
+				event.preventDefault(); // Ngăn chặn gửi dữ liệu mặc định của form
+				
+				// Lấy giá trị tài khoản và mật khẩu từ input
+			var username = $("#username").val();
+			var password = $("#password").val();
+			
+			// Kiểm tra xem có nhập đầy đủ thông tin hay không
+			if (username !== '' && password !== '') {
+				// Gửi dữ liệu đăng nhập đến máy chủ để xác thực
+				
+				// Ví dụ: Sử dụng Ajax để gửi dữ liệu đăng nhập
+				$.ajax({
+					url: "path_to_authentication_script",
+					type: "POST",
+					data: {
+						username: username,
+						password: password
+					},
+					success: function(response) {
+						// Xử lý kết quả xác thực
+						if (response === 'success') {
+							// Đăng nhập thành công, chuyển hướng tới trang chính
+							window.location.href = "../html/index.html";
+						} else {
+							// Đăng nhập không thành công, hiển thị thông báo lỗi
+							alert("Đăng nhập không thành công. Vui lòng kiểm tra lại thông tin đăng nhập.");
+						}
+					},
+					error: function() {
+						// Xử lý khi có lỗi xảy ra
+						alert("Đã xảy ra lỗi. Vui lòng thử lại sau.");
+					}
+				});
+			} else {
+				// Hiển thị thông báo lỗi nếu chưa nhập đủ thông tin
+				alert("Vui lòng nhập đầy đủ tài khoản và mật khẩu.");
+			}
+		});
+	});
+</script>

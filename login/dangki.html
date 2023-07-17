@@ -1,0 +1,176 @@
+<html>
+	<head>
+		<title>MDBIKE</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script src="https://kit.fontawesome.com/3875455e82.js" crossorigin="anonymous"></script>
+		<link rel="stylesheet" type="text/css" href="dangky.css">
+		<script src="jquery-3.6.0.min.js"></script>
+		<script src="muahang.js"></script>
+	</head>
+	<body style="background-color:#EEEEEE;font-family: -apple-system,BlinkMacSystemFont,'Segoe UI';">
+		<div class="login col-10">
+            <div class="phan-dau">
+				<a href="../html/index.html">
+					<img style="float: left;" src="https://img.icons8.com/pastel-glyph/60/000000/back.png"/>					
+					<strong>Quay lại</strong>
+				</a>
+			</div>
+			<div class="anh">
+				<img src="../Anh/login-bg.png">
+			</div>
+			<div class="from">
+				<h2>Đăng ký tài khoản</h2>
+                <div class="split">
+					<p>Chú ý các nội dung có dấu * cần phải nhập</p>
+				</div>
+                <div class="hh-from col-11">
+                    <form method="post" autocomplete="on">
+                        <div class="from-controls">
+                            <label>Tài Khoản</label>
+                            <div class="controls">
+                                <input type="text" name="tk" id="tk" placeholder="Tài khoản *" data-required="1">
+                            </div>
+                        </div><br>
+                        <div class="from-controls">
+                            <label>Họ tên</label>
+                            <div class="controls">
+                                <input type="text" name="ten" id="ten" placeholder="Họ tên *" data-required="1">
+                            </div>
+                        </div><br>
+                        <div class="from-controls">
+                            <label for="matkhau">Mật khẩu</label>
+                            <div class="password-input">
+                                <input type="password" name="matkhau" id="matkhau" placeholder="Mật khẩu *" data-required="1">
+                                <span toggle="#matkhau" class="toggle-password">
+                                    <i class="fa fa-eye"></i>
+                                </span>
+                            </div>
+                        </div><br>
+                        <div class="from-controls">
+                            <label>Nhập lại mật khẩu</label>
+                            <div class="controls">
+                                <input type="text" name="nl-matkhau" id="nl-matkhau" placeholder="Nhập lại mật khẩu *" data-required="1">
+                            </div>
+                        </div><br>
+                        <div class="from-controls">
+                            <label>Email</label>
+                            <div class="controls">
+                                <input type="text" name="email" id="email" placeholder="Email *" data-required="1">
+                            </div>
+                        </div><br>
+                        <div class="from-controls">
+                            <label>Giới tính</label>
+                            <div class="option">
+                                <input type="radio" id="g1-1" name="g1" value="1"/>Nam                       
+                            </div>
+                            <div class="option">
+                                <input type="radio" id="g1-2" name="g1" value="2"/>Nữ
+                            </div>
+                        </div><br><br><br>
+                        <div class="from-controls">
+                            <label>Năm sinh</label>
+                            <div class="controls">
+                                <input type="text" name="ngaysinh" id="ngaysinh" placeholder="Ngày tháng năm sinh">
+                            </div>
+                        </div><br>
+                        <div class="from-controls">
+                            <label>Số điện thoại</label>
+                            <div class="controls">
+                                <input type="tel" name="sdt" id="sdt" placeholder="Số điện thoại *" data-required="1">
+                            </div>
+                        </div><br>
+                        <div class="from-controls">
+                            <label>Địa chỉ</label>
+                            <div class="controls">
+                                <input type="text" name="diachi" id="diachi" placeholder="Địa chỉ *" data-required="1">
+                            </div>
+                        </div><br>
+                        <div class="from-controls">
+                            <label>Tỉnh/Thành phố</label>
+                            <div class="controls">
+                                <select name="SystemCityID" id="SystemCityID" placeholder="Tỉnh/Thành phố">
+                                    <option value="">Chọn tỉnh/thành phố</option>
+                                        <option value="1">Hà Nội</option>
+                                        <option value="50">TP HCM</option>
+                                        <option value="51">Long An</option>
+                                        <option value="52">Tiền Giang</option>
+                                        <option value="53">Bến Tre</option>
+                                        <option value="54">Trà Vinh</option>
+                                        <option value="55">Vĩnh Long</option>
+                                        <option value="56">Đồng Tháp</option>
+                                        <option value="57">An Giang</option>
+                                        <option value="58">Kiên Giang</option>
+                                        <option value="59">Cần Thơ</option>
+                                        <option value="60">Hậu Giang</option>
+                                        <option value="61">Sóc Trăng</option>
+                                        <option value="62">Bạc Liêu</option>
+                                        <option value="63">Cà Mau</option>
+                                        <option value="2">Hà Giang</option>
+                                        <option value="3">Cao Bằng</option>
+                                        <option value="4">Bắc Kạn</option>
+                                        <option value="5">Tuyên Quang</option>
+                                        <option value="6">Lào Cai</option>
+                                        <option value="7">Điện Biên</option>
+                                        <option value="8">Lai Châu</option>
+                                        <option value="9">Sơn La</option>
+                                        <option value="10">Yên Bái</option>
+                                        <option value="11">Hoà Bình</option>
+                                        <option value="12">Thái Nguyên</option>
+                                        <option value="13">Lạng Sơn</option>
+                                        <option value="14">Quảng Ninh</option>
+                                        <option value="15">Bắc Giang</option>
+                                        <option value="16">Phú Thọ</option>
+                                        <option value="17">Vĩnh Phúc</option>
+                                        <option value="18">Bắc Ninh</option>
+                                        <option value="19">Hải Dương</option>
+                                        <option value="20">Hải Phòng</option>
+                                        <option value="21">Hưng Yên</option>
+                                        <option value="22">Thái Bình</option>
+                                        <option value="23">Hà Nam</option>
+                                        <option value="24">Nam Định</option>
+                                        <option value="25">Ninh Bình</option>
+                                        <option value="26">Thanh Hóa</option>
+                                        <option value="27">Nghệ An</option>
+                                        <option value="28">Hà Tĩnh</option>
+                                        <option value="29">Quảng Bình</option>
+                                        <option value="30">Quảng Trị</option>
+                                        <option value="31">Thừa Thiên Huế</option>
+                                        <option value="32">Đà Nẵng</option>
+                                        <option value="33">Quảng Nam</option>
+                                        <option value="34">Quảng Ngãi</option>
+                                        <option value="35">Bình Định</option>
+                                        <option value="36">Phú Yên</option>
+                                        <option value="37">Khánh Hòa</option>
+                                        <option value="38">Ninh Thuận</option>
+                                        <option value="39">Bình Thuận</option>
+                                        <option value="40">Kon Tum</option>
+                                        <option value="41">Gia Lai</option>
+                                        <option value="42">Đắk Lắk</option>
+                                        <option value="43">Đắk Nông</option>
+                                        <option value="44">Lâm Đồng</option>
+                                        <option value="45">Bình Phước</option>
+                                        <option value="46">Tây Ninh</option>
+                                        <option value="47">Bình Dương</option>
+                                        <option value="48">Đồng Nai</option>
+                                        <option value="49">Bà Rịa - Vũng Tàu</option>
+                                </select>
+                            </div>
+                        </div><br>
+                        <div class="from-controls">
+                            <label>Quận/Huyện</label>
+                            <div class="controls">
+                                <select id="SystemDistrictID" name="SystemDistrictID" placeholder="Quận/Huyện *" data-required="1">
+                                    <option value="">Quận/Huyện</option>
+                                </select>
+                            </div>
+                        </div><br>
+                    </form>
+                    <div class="submit">
+                        <button class="dn-submit" type="submit" >ĐĂNG KÍ TÀI KHOẢN</button>
+                    </div>
+                </div>
+				
+			</div>
+		</div>
+	</body>
+</html>

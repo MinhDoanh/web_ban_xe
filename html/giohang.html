@@ -1,0 +1,118 @@
+<html>
+	<head>
+		<title>Gio-Hang MDBIKE</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script src="https://kit.fontawesome.com/3875455e82.js" crossorigin="anonymous"></script>
+		<link rel="stylesheet" type="text/css" href="../css_js/giohang.css">
+		<script src="../css_js/jquery-3.6.0.min.js"></script>
+		<script src="../css_js/muahang.js"></script>
+		<script src="../css_js/khachhang.js"></script>
+	</head>
+	<body style="background-color:#EEEEEE">
+		<div id="t">
+			<ul>
+				<li><a href="#">Trung tâm bảo hành</a></li>
+				<li><a href="#">Tuyển dụng</a></li>
+				<li><a href="#">Tra cứu đơn hàng</a></li>
+				<li><a href="../login/dangnhap.html">Đăng nhập</a></li>
+			</ul>
+		</div>
+		<div id='giohang'>
+			<div class="cart">
+				<div class="phan-dau">
+					<a href="index.html">
+						<img style="float: left;" src="https://img.icons8.com/pastel-glyph/60/000000/back.png"/>					
+						<strong>Quay lại</strong>
+					</a>
+				</div>
+				<div class="phan-than">
+					<div class="cart-info col-7">
+						<div class="cart-icon">
+							<div class="icon-cart">
+								<img src="https://img.icons8.com/material-outlined/64/008000/checked--v1.png"/><br/>
+								<strong>Giỏ hàng</strong>
+							</div>
+							<div id="item-cart">
+								
+								
+							</div>
+							<div class="tong-tien">
+								<p>
+									Tổng giá trị: 
+									<strong class="price price-text">-00 ₫</strong>
+								</p>
+								<p>
+									Giảm giá:
+									<strong class="price">-00 ₫</strong>
+								</p>
+								<p>
+									Tổng thanh toán: 
+									<strong class="price price-text text-red">-00 ₫</strong>
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="cart-form col-5">
+						<!-- <form action="" method="POST" autocomplete="on" > -->
+							<div>
+							<h3>Thông tin đặt hàng</h3>
+							<p class="text" style="color: #AAA;">
+								<i>Bạn cần điền đầy đủ các trường thông tin có dấu *</i>
+							</p>
+							<div class="row">
+								<div class="col">
+									<div class="control">
+										<input type="text" name="ho-ten" id="ho-ten" placeholder="Họ và tên *" data-required="1">
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col">
+									<div class="control">
+										<input type="text" name="sdt" id="sdt" placeholder="Số điện thoại *" data-required="1">
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col">
+									<div class="control">
+										<input type="text" name="dia-chi" id="dia-chi" placeholder="Địa chỉ nhận hàng *" data-required="1">
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col">
+									<div class="control">
+										<input type="text" name="email" id="email" placeholder="Email *">
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col">
+									<div class="control">
+										<textarea name="ghi-chu" placeholder="Ghi chú" id="ghi-chu" spellcheck="false" data-minlength="15" style="height: 70px; overflow-y: hidden;"></textarea>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col">
+									<div class="control">
+										<input type="text" name="ma-giam-gia" id="ma-giam-gia" placeholder="Mã giảm giá (nếu có)">
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="control-botton">
+									<button id="btn_check" onclick="xacnhan()">XÁC NHẬN VÀ ĐẶT HÀNG</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- <script src="../css_js/thanhtoan.js"></script> -->
+		<script src="../css_js/cart.js"></script>
+	</body>
+</html>
